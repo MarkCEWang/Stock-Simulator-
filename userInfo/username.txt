@@ -1,0 +1,7 @@
+username
+firstname
+lastname
+password
+securepass
+20.0
+

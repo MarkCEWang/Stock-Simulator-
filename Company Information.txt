@@ -1,0 +1,15 @@
+Car Company
+101
+5
+Computer Company
+123
+6
+Fast Food Company
+221
+7
+Grocery Store Company
+350
+8
+Banking Company
+400
+9

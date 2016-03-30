@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>135</y>
+      <w>189</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>*Stock*
+--
+stockCode: int
+changePercentage: double
+trend: boolean
+tradeDays: int
+stockQty: int
+stockPrice: double
+locationX:double
+locationY:double
+--
+initializeTradeDays();
+initializeTrend();
+gerenatePercent(double):double
+updatePercent(double);
+updatePrice(double);
+initializePixel();
+updateLocation();
+recordHistory();
+Stock(String,int,double): Stock
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>63</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Company
+--
+companyName: String
+--
+Company(String):Company</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>783</x>
+      <y>180</y>
+      <w>189</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>*News*
+--
+companyIndex: int
+newsIndex: int
+lastCompany: int
+lastNews: int
+newsSelect:int
+--
+newsSelect():String;
+randomNegativeNews():String
+randomPostiveNew():String
+resetNews();
+isPositive():boolean
+companyIndex():int
+newsPicture():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>81</x>
+      <y>531</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>UserStock
+--
+purchase:double
+withdrawal:double
+invested[]:double
+static defaultStockList[]: Stock
+tradeTrend: ArrayList&lt;String&gt;
+tradeQty:ArrayList&lt;double&gt;
+stockName:ArrayList&lt;String&gt;
+--
+static loadStockList();
+static saveStockList();
+static updateStock();
+updateMyStock();
+initializeAmount();
+initializeInvestment();
+addStockToList(int):
+buyStock(int,int):
+removeStockFromList(int);
+sellStock(int,int);
+static rankStock():Stock[]
+static listStock():String[][]
+static allToString(): String();
+calculate(int,int):double;
+addTradeHistory(int,boolean,int);
+myStockToString():ArrayList&lt;String&gt;;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>594</y>
+      <w>189</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>*User*
+--
+username: String
+firstName: String
+lastName: String
+logInPassword: String
+password: String
+list: UserStock
+--
+resetBalance();
+addBalance(double);
+deductBalance(double);
+saveUser();
+loadUser();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>270</x>
+      <y>468</y>
+      <w>90</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>*stockList</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>405</y>
+      <w>252</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>261</x>
+      <y>603</y>
+      <w>261</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>90</y>
+      <w>162</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>90</y>
+      <w>225</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>230.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
